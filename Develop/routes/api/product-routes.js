@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
         { model: Tag, through: ProductTag }
       ],
     });
-
+  // Error handling
     res.status(200).json(products);
   } catch (error) {
     console.error('Error fetching products:', error);
