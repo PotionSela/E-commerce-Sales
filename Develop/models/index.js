@@ -7,7 +7,6 @@ const ProductTag = require('./ProductTag');
 // Products belongsTo Category
 Product.belongsTo (Category, {
   foreignKey: 'product_id',
-  onDelete: 'CASCADE',
 });
 
 // Categories have many Products
@@ -17,10 +16,12 @@ Category.hasMany( Product, {
 });
 
 // Products belongToMany Tags (through ProductTag)
-Product.belongsToMany(ProductTag, {
-  foreignKey: 'tag_id',
-  otherKey: 'tag_id',
-  onDelete: 'CASCADE',
+Product.belongsToMany(Tag, {
+  through: {
+    model: ProductTag,
+    unique: false,
+  },
+  as: 'product_tags'
 })
 
 // Tags belongToMany Products (through ProductTag)
