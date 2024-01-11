@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   // Find all categories
   // Included its associated Products
   try {
-    const categoryData = await Category.findAll ({
+    const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
     res.status(200).json(categoryData);
@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
     });
     if (!categoryData) {
       // If no category is found, return a 404 response
-      res.status(404).json ({ message: "No category found with that ID! Try again please."});
+      res.status(404).json({ message: "No category found with that ID! Try again please." });
       return;
     }  // Send the tag data if successful
     res.status(200).json(categoryData);
@@ -36,8 +36,18 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-router.post('/', (req, res) => {
-  // create a new category
+router.post('/', async (req, res) => {
+  // Create a new category
+  try {
+    const locationData = await Category.create ({
+      category_id: req.body.category_id,
+    });
+    // Sending the newly created category data if successful
+    res.status(200).json(locationData);
+  } catch (err) {
+    // Handle client-side error
+    res.status(400).json(err);
+  }
 });
 
 router.put('/:id', (req, res) => {
