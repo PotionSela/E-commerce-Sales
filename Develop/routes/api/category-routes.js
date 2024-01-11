@@ -75,8 +75,25 @@ try {
 }
 });
 
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+router.delete('/:id', async (req, res) => {
+  // Delete a category by its `id` value
+  try {
+    const categoryData = await Category.destory ({
+      where: {
+        id: req.params.id,
+      },
+    });
+    if (!categoryData) {
+      // If no category is found, return a 404 response
+      res.status(404).json ({ message: "No category found with that ID! Try again please."});
+      return;
+    }
+    // Send the deleted category data if successful
+    res.status(200).json (categoryData);
+  } catch (err) {
+    // Handle server error
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
