@@ -12,3 +12,7 @@ This is a comprehensive solution to the E-commerce challenge, leveraging Express
 - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
 - [Questions](#questions)
+
+
+## Description
+A description will go here!
