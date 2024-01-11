@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
     const categoryData = await Category.findAll({
       include: [{ model: Product }],
     });
+    // Send data if successful
     res.status(200).json(categoryData);
     // Handle server error
   } catch (err) {
