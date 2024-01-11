@@ -16,3 +16,12 @@ This is a comprehensive solution to the E-commerce challenge, leveraging Express
 
 ## Description
 This project aims to build the back end for an e-commerce site. It utilizes Express.js API and configures it to use Sequelize to interact with a MySQL database. The application covers the fundamental architecture of e-commerce sites, allowing businesses to compete effectively in the online marketplace.
+
+### Screenshots
+**Screenshots of application:**
+![example-1](./example-goes-here)
+![example-2](./example-goes-here)
+
+### Walkthrough Video
+**Video of application**
+[![Video]](video-link-here)
