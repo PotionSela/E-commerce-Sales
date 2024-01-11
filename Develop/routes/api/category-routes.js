@@ -17,9 +17,23 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
+router.get('/:id', async (req, res) => {
+  // Find one category by its `id` value
+  // Included its associated Products
+  try {
+    const categoryData = await Category.findByPk(req.params.id, {
+      include: [{ model: Product }],
+    });
+    if (!categoryData) {
+      // If no category is found, return a 404 response
+      res.status(404).json ({ message: "No category found with that ID! Try again please."});
+      return;
+    }  // Send the tag data if successful
+    res.status(200).json(categoryData);
+  } catch (err) {
+    // Handle server error
+    res.status(500).json(err);
+  }
 });
 
 router.post('/', (req, res) => {
