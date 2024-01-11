@@ -46,3 +46,7 @@ OR
 **Note Deletion:** Delete unwanted notes with a single click.
 **Responsive Interface:** User-friendly design for an optimal experience.
 **Persistent Storage:** All notes are saved and retrieved from a JSON database.
+
+
+## Usage Information
+To run this application, use the command line to navigate to the directory of the application, install all dependencies (`npm i`), then type the command `node index.js`. You will then be taken through a series of questions. Once you've done X you can then do X.
