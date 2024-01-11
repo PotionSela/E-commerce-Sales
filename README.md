@@ -37,3 +37,12 @@ This project is powered by X, utilizes X, and the file system module (node packa
 4. Once Node.js v16 is installed, in the terminal, run the command `npm init -y` to initialize and create a `package.json` where project files will be stored.
 5. Next, use the terminal to run the command `npm i` to install the dependencies associated with this application. Developers may need to install X and X directly from the command line. To do so, the command for X will be `npm i inquirer@9.2.12` to install v9.2.12 of inquirer, and `npm i jest` to install the latest version of jest.
 6. To run the application, within the terminal, type the command `node index.js`.
+
+
+## Features
+Features of this application include the user's ability to X, entirely from the command line.
+OR
+**Note of X:** Easily create new notes with a title and content.
+**Note Deletion:** Delete unwanted notes with a single click.
+**Responsive Interface:** User-friendly design for an optimal experience.
+**Persistent Storage:** All notes are saved and retrieved from a JSON database.
