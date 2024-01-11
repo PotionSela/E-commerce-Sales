@@ -25,3 +25,6 @@ This project aims to build the back end for an e-commerce site. It utilizes Expr
 ### Walkthrough Video
 **Video of application**
 [![Video]](video-link-here)
+
+## Technologies Used
+This project is powered by X, utilizes X, and the file system module (node package manager). It also employs X for other things.
