@@ -79,7 +79,7 @@ try {
 router.delete('/:id', async (req, res) => {
   // Delete a category by its `id` value
   try {
-    const categoryData = await Category.destory ({
+    const categoryData = await Category.destroy ({
       where: {
         id: req.params.id,
       },
@@ -93,6 +93,7 @@ router.delete('/:id', async (req, res) => {
     res.status(200).json (categoryData);
   } catch (err) {
     // Handle server error
+    console.log("Error from category delete", err);
     res.status(500).json(err);
   }
 });
