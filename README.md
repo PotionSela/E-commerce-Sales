@@ -20,8 +20,9 @@ This project aims to build the back end for an e-commerce site. It utilizes Expr
 
 ### Screenshots
 **Screenshots of application:**
-![example-1](./example-goes-here)
-![example-2](./example-goes-here)
+![example-route-1](./Develop/images/example-route1.png)
+![example-route-2](./Develop/images/example-route2.png)
+![example-code-1](./Develop/images/example-code1.png)
 
 ### Walkthrough Video
 **Video of application**

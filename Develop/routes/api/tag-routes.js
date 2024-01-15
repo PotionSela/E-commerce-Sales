@@ -43,9 +43,10 @@ router.post('/', async (req, res) => {
       tag_name: req.body.tag_name,
     });
     // Send the newly created tag data if successful
-    res.status(200).json(locationData);
+    res.status(200).json(tagData);
   } catch (err) {
     // Handle client-side error
+    console.log("Error from tag post route", err);
     res.status(400).json(err);
   }
 });
@@ -78,7 +79,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   // Delete on tag by its `id` value
   try {
-    const tagData = await Tag.destory({
+    const tagData = await Tag.destroy({
       where: {
         id: req.params.id,
       },
