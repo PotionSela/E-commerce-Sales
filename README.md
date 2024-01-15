@@ -26,7 +26,7 @@ This project aims to build the back end for an e-commerce site. It utilizes Expr
 
 ### Walkthrough Video
 **Video of application**
-[![Video]](video-link-here)
+[![Video]](https://drive.google.com/file/d/1bTVt0ncQB79Bk4pKlUHauQkrbMpQ-TDD/view)
 
 ## Technologies Used
 This project is powered by Express.js, Sequelize, and MySQL for database interaction. It utilizes npm for package management and employs dotenv for handling environment variables.
